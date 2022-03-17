@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /*  Primary */
+  --S-Blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --red: rgba(0, 255, 255, 0.5);
+  /*  Neutral */
+
+  --VD-Blue-main: hsl(217, 54%, 11%);
+  --VD-Blue-card: hsl(216, 50%, 16%);
+  --VD-Blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+html {
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+body {
+  background-color: var(--VD-Blue-main);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--VD-Blue-card);
+  margin-right: 15px;
+  padding: 22px;
+  overflow: hidden;
+  border-radius: 15px;
+  width: 290px;
+  box-shadow: -10px 20px 10px rgb(10, 10, 10), 10px 20px 10px rgb(10, 10, 10);
+}
+
+.images {
+  position: relative;
+}
+
+.firstImg {
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.images div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(178, 100%, 50%, 40%);
+  opacity: 0;
+  border-radius: 10px;
+}
+
+.images div img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  color: var(--White);
+  font-size: 1.2em;
+  margin: 20px 0px 15px 0px;
+}
+
+p {
+  color: var(--S-Blue);
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.container {
+  margin-top: 20px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px var(--VD-Blue-line) solid;
+  margin-bottom: 15px;
+}
+
+.eth {
+  color: var(--Cyan);
+  font-size: 0.8rem;
+  display: flex;
+  align-self: flex-start;
+}
+
+.days {
+  display: flex;
+  align-self: flex-start;
+  font-size: 0.8rem;
+}
+.eth img {
+  padding-right: 7px;
+}
+
+.days img {
+  padding-right: 7px;
+}
+
+.cardBottom {
+  display: flex;
+}
+
+.cardBottom p {
+  margin: 0;
+  display: flex;
+  align-self: center;
+}
+
+.cardBottom img {
+  margin-right: 18px;
+  width: 32px;
+  height: 32px;
+  border: 1px var(--White) solid;
+  border-radius: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--White);
+}
+
+@media (min-width: 1440px) {
+  a:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+  }
+  .images div:hover {
+    opacity: 1;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+  }
+}
